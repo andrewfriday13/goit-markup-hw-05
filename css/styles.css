@@ -504,3 +504,20 @@ visibility: hidden ;
   cursor: pointer;
   
 }
+.rute {
+  position: relative;
+}
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: var(--background);
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+  text-transform: uppercase;
+
+}
