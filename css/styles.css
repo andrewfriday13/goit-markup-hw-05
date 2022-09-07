@@ -271,6 +271,7 @@ ul [href="tel:+380961111111"]:focus {
   margin-left: auto;
   margin-right: auto;
 }
+
 .buttom-cap {
   color: var(--background);
   font-size: 16px;
@@ -385,7 +386,7 @@ background-color: var(--bg-svg);
   background-color: var(--color-but);
 }
 
-.section [type="button"] {
+.list-buttoms [type="button"] {
   height: 38px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -394,8 +395,8 @@ background-color: var(--bg-svg);
   padding: 6px 22px;
   cursor: pointer;
 }
-.section [type="button"]:hover,
-.section [type="button"]:focus {
+.list-buttoms [type="button"]:hover,
+.list-buttoms [type="button"]:focus {
   background-color: var(--active-but);
   color: var(--background);
   box-shadow: 0px 3px 1px #0000001a, 0px 1px 2px #00000014, 0px 2px 2px #0000001f;
@@ -461,4 +462,45 @@ fill: var(--color-but);
 }
 .clients-link:hover{
   border-color: var(--color-but);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000001A;
+}
+.backdrop.is-hidden{
+opacity: 0;
+pointer-events: none;
+visibility: hidden ;
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:  528px; 
+  height: 581px;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--background);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.backdrop [type="button"]{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  cursor: pointer;
+  
 }
