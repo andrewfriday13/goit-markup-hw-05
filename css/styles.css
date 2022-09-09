@@ -7,6 +7,8 @@
   --active-but: #188ce8;
   --icon-color: #afb1b8;
   --bg-svg: #F5F4FA;
+  --bg-color-90:rgba(33, 150, 243, 90%);
+  --time-func: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   color: var(--text);
@@ -38,6 +40,18 @@ header {
   display: block;
   padding-top: 28px;
   padding-bottom: 28px;
+  
+}
+.header-nav-link::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-but) ;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  border-radius: 2px;
 }
 span {
   color: var(--color-but);
@@ -154,7 +168,7 @@ ul .footer-link:focus {
 .list-products {
   display: inline-block;
   transition-property: color, box-shadow ;
-  transition-duration: 250ms, 250ms;
+  transition-duration: 250ms, 250ms ;
 }
 .products h2 {
   font-size: 18px;
@@ -171,7 +185,7 @@ ul .footer-link:focus {
 .section .list-produsct:hover{
  box-shadow: 0px 1px 1px #0000001f, 0px 4px 4px #0000000f, 1px 4px 6px #00000029;
 }
-.products p {
+.border p {
   font-size: 16px;
   line-height: 1.9;
   text-align: left;
@@ -181,6 +195,7 @@ ul .footer-link:focus {
   width: 370px;
   letter-spacing: 0.06em;
 }
+
 ul [href="mailto:info@devstudio.com"]:hover,
 ul [href="mailto:info@devstudio.com"]:focus,
 ul [href="tel:+380961111111"]:hover,
@@ -228,7 +243,7 @@ ul [href="tel:+380961111111"]:focus {
   gap: 10px;
   fill: var(--color-p);
   transition-property: color;
-  transition-duration: 250ms;
+  transition-duration: 250ms ;
 }
 .icon-contacts:hover .icon-tap,
 .icon-contacts:focus .icon-tap {
@@ -236,7 +251,7 @@ ul [href="tel:+380961111111"]:focus {
 }
 .icon-tap{
   transition-property: color;
-  transition-duration: 250ms;
+  transition-duration: 250ms ;
 }
 .icon-tap:hover,
 .icon-tap:focus {
@@ -244,7 +259,8 @@ ul [href="tel:+380961111111"]:focus {
 }
 .list-item{
   justify-content: center;
-  
+position: relative;
+   
 }
 .list-buttoms {
   display: flex;
@@ -475,7 +491,7 @@ fill: var(--color-but);
 .clients-icon{
   fill: currentColor;
   transition-property: fill, border-color;
-  transition-duration: 250ms,250ms;
+  transition-duration: 250ms,250ms var(--time-func);
 }
 .clients-link:hover,
 .clients-link:focus{
@@ -537,5 +553,33 @@ visibility: hidden ;
   width: 100%;
   height: 70px;
   text-transform: uppercase;
-
+}
+.team-thumb{
+  position: relative;
+  overflow: hidden;
+}
+.overlay{
+  transform: translateY(100%); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  background-color: var(--bg-color-90);
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  letter-spacing: 0.03em;
+  font-size: 18px;
+  transition-duration: 250ms ;
+}
+.overlay-desc{
+ letter-spacing: 0.03em;
+ font-size: 18px;
+ color: var(--background);
+ line-height: calc(28/18);
+}
+li:hover .overlay{
+ transform: translateY(0);
 }
