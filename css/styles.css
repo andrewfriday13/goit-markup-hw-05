@@ -8,7 +8,6 @@
   --icon-color: #afb1b8;
   --bg-svg: #F5F4FA;
   --bg-color-90:rgba(33, 150, 243, 90%);
-  --time-func: cubic-bezier(0.4, 0, 0.2, 1);
   --bg-backdrop:#0000001A;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -117,8 +116,8 @@ footer [href="https://goo.gl/maps/d5CcS2hFM6yTFQRFA"]
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);;
-  transition-property: fill, background-color;
-  transition-duration: 250ms, 250ms; 
+  transition-property:  background-color;
+  transition-duration:  250ms; 
   transition-timing-function: var(--timing-function);   
 }
 ul .footer-link:hover,
@@ -160,8 +159,8 @@ ul .footer-link:focus {
 
 .list-products {
   display: inline-block;
-  transition-property: color, box-shadow ;
-  transition-duration: 250ms, 250ms ;
+  transition-property:  box-shadow ;
+  transition-duration: 250ms ;
   transition-timing-function: var(--timing-function);
 }
 .products h2 {
@@ -240,7 +239,8 @@ ul [href="tel:+380961111111"]:focus {
   color: var(--color-p);
   letter-spacing: 0.02em;
   padding-top: 28px;
-  padding-bottom: 29px;
+  padding-bottom: 28px;
+  font-weight: 500;
 }
 
 .icon-contacts {
@@ -414,7 +414,7 @@ background-color: var(--bg-svg);
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);;
   transition-property: fill, background-color;
-  transition-duration: 250ms, 250ms;
+  transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
 
@@ -432,7 +432,7 @@ background-color: var(--bg-svg);
   font-size: 16px;
   padding: 6px 22px;
   cursor: pointer;
-  transition-property: color;
+  transition-property: color, background-color, box-shadow ;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
@@ -441,7 +441,6 @@ background-color: var(--bg-svg);
   background-color: var(--active-but);
   color: var(--background);
   box-shadow: 0px 3px 1px #0000001a, 0px 1px 2px #00000014, 0px 2px 2px #0000001f;
-  border-radius: 4px;
 }
 
 .border {
@@ -493,6 +492,7 @@ background-color: var(--bg-svg);
  width: 100%;
  height: 100% ;
  color: var(--icon-color);
+  transition-property: fill, border-color;
 }
 ul .clients-link:hover .clients-icon,
 ul .clients-link:focus .clients-icon{
@@ -500,8 +500,7 @@ fill: var(--color-but);
 }
 .clients-icon{
   fill: currentColor;
-  transition-property: fill, border-color;
-  transition-duration: 250ms,250ms ;
+  transition-duration: 250ms ;
   transition-timing-function: var(--timing-function);
 }
 .clients-link:hover,
@@ -529,12 +528,13 @@ visibility: hidden ;
   left: 50%;
   width:  528px; 
   height: 581px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) ;
 
   background-color: var(--background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .backdrop [type="button"]{
   position: absolute;
   top: 8px;
@@ -585,6 +585,7 @@ visibility: hidden ;
   padding: 63px 24px;
   letter-spacing: 0.03em;
   font-size: 18px;
+  transition-property: transform;
   transition-duration: 250ms ;
   transition-timing-function: var(--timing-function);
 }
